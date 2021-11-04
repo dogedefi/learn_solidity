@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ganache": " ganache-cli -l 0x1ffffffffffff -e 1000000000 --allowUnlimitedContractSize -m \"test test test test test test test test test test test junk\""
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/dogedefi/learn_solidity/issues"
   },
-  "homepage": "https://github.com/dogedefi/learn_solidity#readme"
+  "homepage": "https://github.com/dogedefi/learn_solidity#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.1",
+    "hardhat": "^2.6.7"
+  }
 }
