@@ -21,7 +21,7 @@ contract DataLocation {
 
     // 规则2 函数参数与返回值。函数参数包括返回参数都存储在内存中。
     function calculate(uint num1, uint num2) public pure returns (uint result) {
-        return num1 + num2
+        return num1 + num2;
     }
 
     // 规则3 – 局部变量。值类型的局部变量存储在内存中。但是，对于引用类型，需要显式地指定数据位置。
@@ -53,12 +53,12 @@ contract DataLocation {
 
     // 持久化存储（计算机的硬盘中），gas费用较高
     function useStorage(address _user) public {
-        UserInfo storage user = userInfo[_pid][_user];
+        // UserInfo storage user = userInfo[_pid][_user];
     }
 
     // 函数之间传递一些信息，消耗少量gas，存放在内存。针对可变引用类型场景
     function useMemory(uint256 _pid) public {
-        PoolInfo memory pool = poolInfo[_pid];
+        // PoolInfo memory pool = poolInfo[_pid];
         // doSomething(pool); // Mabey change pool's inner state
     }
 
@@ -69,3 +69,4 @@ contract DataLocation {
         //     _addChainlinkOracle(currencyKeys[ind], oracleAddresses[ind], removeExisting);
         // }
     }
+}
